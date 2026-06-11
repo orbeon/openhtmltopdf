@@ -56,6 +56,14 @@ public class Selector {
 
     private List<Condition> conditions;
 
+    /**
+     * Requirements of this selector's rightmost simple selector, recorded at
+     * parse time so that {@link #mayMatch} can cheaply reject candidate
+     * elements without running the full conditions (see Matcher.Mapper).
+     */
+    private String _requiredId;
+    private List<String> _requiredClasses;
+
     public final static int DESCENDANT_AXIS = 0;
     public final static int CHILD_AXIS = 1;
     public final static int IMMEDIATE_SIBLING_AXIS = 2;
@@ -103,6 +111,47 @@ public class Selector {
             return true;
         }
         return false;
+    }
+
+    /**
+     * Cheap, conservative pre-check for {@link #matches}: returns false only
+     * if matches() would certainly return false for an element with the given
+     * name, id and class tokens. Used by Matcher.Mapper to skip the full
+     * match for the (typical) majority of candidate selectors.
+     *
+     * @param elementName the element name as returned by
+     *                    {@code TreeResolver.getElementName}
+     * @param id          the element id as returned by
+     *                    {@code AttributeResolver.getID}, or null
+     * @param classes     the whitespace-separated tokens of the class
+     *                    attribute, or null if there is no class attribute or
+     *                    no attribute resolver
+     */
+    boolean mayMatch(String elementName, String id, Set<String> classes) {
+        // Mirrors TreeResolver.matchesElement: with a namespace the name must
+        // equal the local name, without one it must equal local-or-node name;
+        // in both cases a differing name can never match (the namespace check,
+        // if any, is left to the full matches()).
+        if (_name != null && !_name.equals(elementName)) {
+            return false;
+        }
+        // Mirrors IDCondition: _id.equals(attRes.getID(e))
+        if (_requiredId != null && !_requiredId.equals(id)) {
+            return false;
+        }
+        // Mirrors ClassCondition: each class name must be a whitespace
+        // delimited token of the class attribute
+        if (_requiredClasses != null) {
+            if (classes == null) {
+                return false;
+            }
+            for (int i = 0; i < _requiredClasses.size(); i++) {
+                if (!classes.contains(_requiredClasses.get(i))) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     /**
@@ -216,6 +265,9 @@ public class Selector {
     public void addIDCondition(String id) {
         _specificityB++;
         addCondition(Condition.createIDCondition(id));
+        if (_requiredId == null) {
+            _requiredId = id;
+        }
     }
 
     /**
@@ -224,6 +276,10 @@ public class Selector {
     public void addClassCondition(String className) {
         _specificityC++;
         addCondition(Condition.createClassCondition(className));
+        if (_requiredClasses == null) {
+            _requiredClasses = new java.util.ArrayList<>(2);
+        }
+        _requiredClasses.add(className);
     }
 
     /**

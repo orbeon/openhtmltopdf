@@ -229,6 +229,42 @@ public class Matcher {
         _map.put(e, m);
     }
 
+    /**
+     * Splits a class attribute value into its whitespace separated tokens,
+     * with the same token semantics as Condition.ClassCondition (delimiters
+     * are anything for which {@link Character#isWhitespace} is true).
+     *
+     * @return null if the attribute is absent (classAttr null), otherwise the
+     *         possibly empty set of tokens
+     */
+    static Set<String> classTokens(String classAttr) {
+        if (classAttr == null) {
+            return null;
+        }
+
+        Set<String> result = Collections.emptySet();
+        int length = classAttr.length();
+        int i = 0;
+
+        while (i < length) {
+            while (i < length && Character.isWhitespace(classAttr.charAt(i))) {
+                i++;
+            }
+            int start = i;
+            while (i < length && !Character.isWhitespace(classAttr.charAt(i))) {
+                i++;
+            }
+            if (i > start) {
+                if (result.isEmpty()) {
+                    result = new HashSet<>(8);
+                }
+                result.add(classAttr.substring(start, i));
+            }
+        }
+
+        return result;
+    }
+
     private Mapper getMapper(Object e) {
         Mapper m = _map.get(e);
         if (m != null) {
@@ -312,6 +348,15 @@ public class Matcher {
 
             StringBuilder key = new StringBuilder();
 
+            // Computed once per element so that, for each candidate selector,
+            // Selector.mayMatch can cheaply reject without re-reading the DOM
+            // or re-scanning the class attribute (the dominant cost on
+            // selector-heavy documents, see
+            // https://github.com/orbeon/orbeon-forms/issues/7681).
+            String elementName = _treeRes.getElementName(e);
+            String elementId = _attRes != null ? _attRes.getID(e) : null;
+            Set<String> elementClasses = classTokens(_attRes != null ? _attRes.getClass(e) : null);
+
             for (Selector sel : axes) {
                 if (sel.getAxis() == Selector.DESCENDANT_AXIS) {
                     if (childAxes == null) {
@@ -322,6 +367,10 @@ public class Matcher {
                     childAxes.add(sel);
                 } else if (sel.getAxis() == Selector.IMMEDIATE_SIBLING_AXIS) {
                     throw new RuntimeException();
+                }
+
+                if (!sel.mayMatch(elementName, elementId, elementClasses)) {
+                    continue;
                 }
 
                 if (!sel.matches(e, _attRes, _treeRes)) {

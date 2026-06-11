@@ -1,0 +1,1177 @@
+/* Original CSS path: /apps/fr/themes/2025/theme.css */
+.orbeon {
+  --orbeon-base-background-color: white;
+  --orbeon-base-border-color: #e3e3e3;
+  --orbeon-body-decorations-border-radius: 4px;
+  --orbeon-base-font-size: 13px;
+  --orbeon-base-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --orbeon-base-font-weight: normal;
+  --orbeon-base-color: #333;
+  --orbeon-link-color: #08c;
+  --orbeon-link-hover-color: #005580;
+  --orbeon-label-font-size: 1em;
+  --orbeon-label-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --orbeon-label-font-weight: 600;
+  --orbeon-label-color: var(--orbeon-base-color);
+  --orbeon-label-read-only-color: #6E6E6E;
+  --orbeon-label-letter-spacing: normal;
+  --orbeon-label-text-transform: none;
+  --orbeon-label-margin: 0;
+  --orbeon-label-padding: 0;
+  --orbeon-hint-font-size: smaller;
+  --orbeon-hint-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --orbeon-hint-font-weight: var(--orbeon-base-font-weight);
+  --orbeon-hint-color: #6E6E6E;
+  --orbeon-help-icon-font-size: 0.86em;
+  --orbeon-help-icon-color: black;
+  --orbeon-help-icon-content: "\f05a";
+  --orbeon-help-icon-font-family: FontAwesome;
+  --orbeon-help-icon-font-weight: normal;
+  --orbeon-help-icon-background-color: transparent;
+  --orbeon-help-icon-hover-background-color: transparent;
+  --orbeon-help-icon-active-background-color: transparent;
+  --orbeon-help-icon-border-radius: 0;
+  --orbeon-help-icon-focus-outline: revert;
+  --orbeon-help-icon-focus-ring: none;
+  --orbeon-help-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --orbeon-help-background-color: white;
+  --orbeon-help-border-color: rgba(0, 0, 0, 0.2);
+  --orbeon-help-content-font-size: 1em;
+  --orbeon-help-content-font-weight: var(--orbeon-base-font-weight);
+  --orbeon-help-content-color: var(--orbeon-base-color);
+  --orbeon-help-title-font-size: 1.08em;
+  --orbeon-help-title-font-weight: var(--orbeon-base-font-weight);
+  --orbeon-help-title-color: var(--orbeon-base-color);
+  --orbeon-help-title-background-color: #f7f7f7;
+  --orbeon-help-title-border-color: #ebebeb;
+  --orbeon-help-close-color: black;
+  --orbeon-help-close-text-shadow-color: #ffffff;
+  --orbeon-control-font-size: 1em;
+  --orbeon-control-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --orbeon-control-font-weight: var(--orbeon-base-font-weight);
+  --orbeon-control-color: black;
+  --orbeon-control-background-color: white;
+  --orbeon-control-read-only-background-color: #f2f2f2;
+  --orbeon-control-border-color: #ccc;
+  --orbeon-control-border-radius: 4px;
+  --orbeon-control-border-width: 1px;
+  --orbeon-control-border-style: solid;
+  --orbeon-control-padding: 4px 6px;
+  --orbeon-add-on-color: var(--orbeon-base-color);
+  --orbeon-add-on-background-color: #eee;
+  --orbeon-add-on-text-shadow-color: white;
+  --orbeon-add-on-border-radius: var(--orbeon-control-border-radius);
+  --orbeon-add-on-gap: -1px;
+  --orbeon-add-on-inner-border-radius: 0;
+  --orbeon-attachment-drop-color: #6E6E6E;
+  --orbeon-attachment-drop-border-style: dashed;
+  --orbeon-attachment-empty-border-style: solid;
+  --orbeon-attachment-dragover-color: white;
+  --orbeon-attachment-dragover-background-color: #ccc;
+  --orbeon-dropdown-caret-color: var(--orbeon-button-color);
+  --orbeon-dropdown-search-caret-color: #888;
+  --orbeon-dropdown-selected-background-color: #ddd;
+  --orbeon-handwritten-signature-background-color: white;
+  --orbeon-handwritten-signature-read-only-background-color: #eee;
+  --orbeon-image-attachment-background-color: #eee;
+  --orbeon-textarea-resize: vertical;
+  --orbeon-control-height: 28px;
+  --orbeon-textarea-height: 68px;
+  --orbeon-multiple-select-height: 78px;
+  --orbeon-focus-border-color: #3396ff;
+  --orbeon-focus-highlight-color: rgba(0, 123, 255, 0.25);
+  --orbeon-focus-ring: 0 0 0 0.2rem var(--orbeon-focus-highlight-color);
+  --orbeon-control-focus-ring: var(--orbeon-focus-ring);
+  --orbeon-transition-duration: 0.15s;
+  --orbeon-transition-timing-function: ease-in-out;
+  --orbeon-checkable-background-color: white;
+  --orbeon-checkable-border-color: rgba(0, 0, 0, 0.25);
+  --orbeon-checkable-checked-background-color: var(--orbeon-button-primary-background-color);
+  --orbeon-checkable-checked-border-color: var(--orbeon-button-primary-background-color);
+  --orbeon-checkable-disabled-background-color: white;
+  --orbeon-checkable-disabled-border-color: rgba(0, 0, 0, 0.25);
+  --orbeon-checkable-focus-ring: var(--orbeon-focus-ring);
+  --orbeon-button-font-size: 1em;
+  --orbeon-button-border-radius: 4px;
+  --orbeon-button-inner-border-radius: 0;
+  --orbeon-button-padding: 4px 12px;
+  --orbeon-button-toggle-padding: 4px 8px;
+  --orbeon-button-compact-padding: 0 6px;
+  --orbeon-button-focus-ring: var(--orbeon-focus-ring);
+  --orbeon-button-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --orbeon-button-font-weight: normal;
+  --orbeon-button-color: var(--orbeon-base-color);
+  --orbeon-button-background-color: #e8e8e8;
+  --orbeon-button-highlight-background-color: #e6e6e6;
+  --orbeon-button-disabled-color: var(--orbeon-button-color);
+  --orbeon-button-disabled-background-color: var(--orbeon-button-background-color);
+  --orbeon-button-primary-color: white;
+  --orbeon-button-primary-background-color: #0d6efd;
+  --orbeon-button-primary-highlight-background-color: #0b5ed7;
+  --orbeon-button-primary-disabled-color: var(--orbeon-button-primary-color);
+  --orbeon-button-primary-disabled-background-color: var(--orbeon-button-primary-background-color);
+  --orbeon-button-warning-color: white;
+  --orbeon-button-warning-background-color: #fbb450;
+  --orbeon-button-warning-highlight-background-color: #f89406;
+  --orbeon-button-warning-disabled-color: var(--orbeon-button-warning-color);
+  --orbeon-button-warning-disabled-background-color: var(--orbeon-button-warning-background-color);
+  --orbeon-button-danger-color: white;
+  --orbeon-button-danger-background-color: #ee5f5b;
+  --orbeon-button-danger-highlight-background-color: #bd362f;
+  --orbeon-button-danger-disabled-color: var(--orbeon-button-danger-color);
+  --orbeon-button-danger-disabled-background-color: var(--orbeon-button-danger-background-color);
+  --orbeon-button-success-color: white;
+  --orbeon-button-success-background-color: #62c462;
+  --orbeon-button-success-highlight-background-color: #51a351;
+  --orbeon-button-success-disabled-color: var(--orbeon-button-success-color);
+  --orbeon-button-success-disabled-background-color: var(--orbeon-button-success-background-color);
+  --orbeon-button-info-color: white;
+  --orbeon-button-info-background-color: #5bc0de;
+  --orbeon-button-info-highlight-background-color: #2f96b4;
+  --orbeon-button-info-disabled-color: var(--orbeon-button-info-color);
+  --orbeon-button-info-disabled-background-color: var(--orbeon-button-info-background-color);
+  --orbeon-button-inverse-color: white;
+  --orbeon-button-inverse-background-color: #444;
+  --orbeon-button-inverse-highlight-background-color: #222;
+  --orbeon-button-inverse-disabled-color: var(--orbeon-button-inverse-color);
+  --orbeon-button-inverse-disabled-background-color: var(--orbeon-button-inverse-background-color);
+  --orbeon-button-disabled-opacity: 0.65;
+  --orbeon-button-disabled-icon-opacity: 0.4;
+  --orbeon-dropdown-open-toggle-background-color: var(--orbeon-button-highlight-background-color);
+  --orbeon-dropdown-menu-color: #333;
+  --orbeon-dropdown-menu-background-color: white;
+  --orbeon-dropdown-menu-hover-color: white;
+  --orbeon-dropdown-menu-hover-background-color: #0d6efd;
+  --orbeon-dropdown-menu-selected-color: white;
+  --orbeon-dropdown-menu-selected-background-color: #0d6efd;
+  --orbeon-dropdown-menu-disabled-color: #999;
+  --orbeon-dropdown-menu-border-color: rgba(0, 0, 0, 0.15);
+  --orbeon-dropdown-menu-border-width: 1px;
+  --orbeon-dropdown-menu-divider-color: #e5e5e5;
+  --orbeon-dropdown-menu-item-padding: 3px 20px;
+  --orbeon-section-title-font-size: 1.38em;
+  --orbeon-section-repetition-label-font-size: 0.89em;
+  --orbeon-subsection-title-font-size: 1.11em;
+  --orbeon-subsection-repetition-label-font-size: 0.89em;
+  --orbeon-section-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --orbeon-section-font-weight: normal;
+  --orbeon-section-color: #555;
+  --orbeon-section-background-color: #eee;
+  --orbeon-section-border-radius: 4px;
+  --orbeon-section-gap: 20px;
+  --orbeon-section-content-padding: 10px 16px;
+  --orbeon-section-iteration-title-padding: 0 0 0 10px;
+  --orbeon-repeater-add-button-font-size: 1em;
+  --orbeon-repeater-add-button-font-family: var(--orbeon-base-font-family);
+  --orbeon-repeater-add-button-font-weight: var(--orbeon-base-font-weight);
+  --orbeon-repeater-add-button-color: var(--orbeon-base-color);
+  --orbeon-repeat-menu-background-color: #f5f5f5;
+  --orbeon-repeat-border-width: 1px;
+  --orbeon-repeat-border-style: solid;
+  --orbeon-repeat-separator-width: 2px;
+  --orbeon-repeat-separator-style: solid;
+  --orbeon-grid-label-margin: 2px 0 4px 0;
+  --orbeon-repetition-number-font-size: smaller;
+  --orbeon-repetition-number-font-family: var(--orbeon-base-font-family);
+  --orbeon-repetition-number-font-weight: bold;
+  --orbeon-repetition-number-color: white;
+  --orbeon-repetition-number-background-color: #999;
+  --orbeon-repetition-number-text-shadow-color: rgba(0, 0, 0, 0.25);
+  --orbeon-repetition-selected-background-color: #eee;
+  --orbeon-toc-color: #0d6efd;
+  --orbeon-toc-background-color: white;
+  --orbeon-toc-hover-background-color: #eee;
+  --orbeon-toc-selected-color: white;
+  --orbeon-toc-selected-background-color: #0d6efd;
+  --orbeon-toc-error-color: #B94A48;
+  --orbeon-toc-error-background-color: transparent;
+  --orbeon-toc-selected-error-color: white;
+  --orbeon-toc-selected-error-background-color: #B94A48;
+  --orbeon-navbar-color: white;
+  --orbeon-navbar-background-color: #212529;
+  --orbeon-navbar-heading-font-size: 1.54em;
+  --orbeon-navbar-heading-color: #909395;
+  --orbeon-navbar-dropdown-open-toggle-background-color: #111;
+  --orbeon-navbar-language-dropdown-color: #999999;
+  --orbeon-navbar-language-dropdown-hover-color: var(--orbeon-navbar-color);
+  --orbeon-table-background-color: white;
+  --orbeon-table-striped-background-color: #f9f9f9;
+  --orbeon-table-hover-background-color: #ededed;
+  --orbeon-table-border-color: #ddd;
+  --orbeon-tab-background-color: white;
+  --orbeon-tab-border-color: #ddd;
+  --orbeon-tab-border-width: 1px;
+  --orbeon-tab-padding: 10px;
+  --orbeon-search-free-input-read-only-background-color: #e8e8e8;
+  --orbeon-revision-history-pane-title-font-size: 1.11em;
+  --orbeon-revision-history-pane-head-background-color: #fafafa;
+  --orbeon-revision-history-entry-background-color: #eee;
+  --orbeon-revision-history-entry-border-color: #ccc;
+  --orbeon-blockquote-font-size: 1.35em;
+  --orbeon-blockquote-font-family: var(--orbeon-base-font-family);
+  --orbeon-blockquote-font-weight: 300;
+  --orbeon-blockquote-color: var(--orbeon-base-color);
+  --orbeon-code-font-size: 0.92em;
+  --orbeon-code-font-family: monospace;
+  --orbeon-code-font-weight: var(--orbeon-base-font-weight);
+  --orbeon-code-color: var(--orbeon-base-color);
+  --orbeon-pre-font-size: 1em;
+  --orbeon-pre-font-family: monospace;
+  --orbeon-pre-font-weight: var(--orbeon-base-font-weight);
+  --orbeon-pre-color: var(--orbeon-base-color);
+  --orbeon-sub-sup-font-size: 0.75em;
+  --orbeon-search-caret-font-size: 0.8em;
+  --orbeon-section-caret-font-size: 0.75em;
+  --orbeon-dialog-icon-font-size: 50px;
+  --orbeon-fa-icon-font-size: 0.92em;
+  --orbeon-required-icon-font-size: 0.6em;
+  --orbeon-form-description-background-color: var(--orbeon-alert-background-color);
+  --orbeon-form-description-color: var(--orbeon-alert-color);
+  --orbeon-form-description-border-left: 1px solid var(--orbeon-alert-border-color);
+  --orbeon-form-description-padding: 8px 1em;
+  --orbeon-form-description-font-weight: var(--orbeon-base-font-weight);
+  --orbeon-active-alert-font-size: 1em;
+  --orbeon-active-alert-font-family: sans-serif;
+  --orbeon-active-alert-font-weight: var(--orbeon-base-font-weight);
+  --orbeon-active-alert-color: white;
+  --orbeon-active-alert-padding: 2px 8px;
+  --orbeon-active-alert-margin-top: 10px;
+  --orbeon-active-alert-border-radius: 5px;
+  --orbeon-active-alert-border-width: 1px;
+  --orbeon-active-alert-border-style: solid;
+  --orbeon-active-alert-pointer-display: block;
+  --orbeon-invalid-alert-background-color: var(--orbeon-error-color);
+  --orbeon-invalid-alert-border-color: var(--orbeon-error-color);
+  --orbeon-invalid-alert-pointer-color: var(--orbeon-error-color);
+  --orbeon-warning-alert-background-color: var(--orbeon-warning-color);
+  --orbeon-warning-alert-border-color: var(--orbeon-warning-color);
+  --orbeon-warning-alert-pointer-color: var(--orbeon-warning-color);
+  --orbeon-info-alert-background-color: var(--orbeon-info-color);
+  --orbeon-info-alert-border-color: var(--orbeon-info-color);
+  --orbeon-info-alert-pointer-color: var(--orbeon-info-color);
+  --orbeon-alert-color: #555;
+  --orbeon-alert-background-color: white;
+  --orbeon-alert-border-color: #e3e3e3;
+  --orbeon-alert-text-shadow-color: rgba(255, 255, 255, 0.5);
+  --orbeon-alert-error-color: #842029;
+  --orbeon-alert-error-background-color: #f8d7da;
+  --orbeon-alert-error-border-color: #f5c2c7;
+  --orbeon-alert-success-color: #0f5132;
+  --orbeon-alert-success-background-color: #d1e7dd;
+  --orbeon-alert-success-border-color: #badbcc;
+  --orbeon-alert-warning-color: #664d03;
+  --orbeon-alert-warning-background-color: #fff3cd;
+  --orbeon-alert-warning-border-color: #ffecb5;
+  --orbeon-error-summary-display: block;
+  --orbeon-error-summary-title-color: white;
+  --orbeon-error-summary-title-bottom-border-color: #e5e5e5;
+  --orbeon-error-summary-item-background-color: white;
+  --orbeon-error-summary-border-radius: 4px;
+  --orbeon-info-color: #3a87ad;
+  --orbeon-warning-color: #fbb450;
+  --orbeon-error-color: #B94A48;
+  --orbeon-invalid-label-color: var(--orbeon-label-color);
+  --orbeon-invalid-control-border-color: var(--orbeon-error-color);
+  --orbeon-invalid-control-border-width: 1px;
+  --orbeon-required-icon-display-before: inline;
+  --orbeon-required-icon-display-after: none;
+  /*
+  // Required icon (right)
+  --orbeon-required-icon-display-before: none;
+  --orbeon-required-icon-display-after : inline;
+  */
+  --orbeon-dialog-background-color: white;
+  --orbeon-dialog-title-font-size: 1.11em;
+  --orbeon-dialog-title-color: black;
+  --orbeon-dialog-title-background-color: #fafafa;
+  --orbeon-header-footer-font-size: 1.1em;
+  --orbeon-kbd-hint-display: inline-block;
+  --orbeon-kbd-hint-font-size: 0.82em;
+  --orbeon-version-color: #6E6E6E;
+  --orbeon-h1-font-size: 2.96em;
+  --orbeon-h2-font-size: 2.42em;
+  --orbeon-h3-font-size: 1.88em;
+  --orbeon-h4-font-size: 1.35em;
+  --orbeon-h5-font-size: 1.08em;
+  --orbeon-h6-font-size: 0.92em;
+  --orbeon-tooltip-font-size: 0.85em;
+  --orbeon-tooltip-color: #fff;
+  --orbeon-tooltip-background-color: #000;
+  --orbeon-landing-card-border-color: #ddd;
+  --orbeon-landing-card-image-border: #eee;
+  --orbeon-landing-card-header-color: #22251f;
+  --orbeon-landing-card-header-background-color: #f7f7f7;
+  --orbeon-landing-card-hover-background-color: #f9f9f9;
+  --orbeon-landing-card-link-color: #08c;
+  --orbeon-landing-card-link-hover-color: #005580;
+  --orbeon-friendly-captcha-font-size: 1.08em;
+  --orbeon-on-premise-captcha-label-color: var(--orbeon-base-color);
+  --orbeon-inspector-font-size: 13px;
+  --orbeon-stripe-color-1: #f5f5f5;
+  --orbeon-stripe-color-2: white;
+}
+@media (prefers-contrast: more) {
+  .orbeon {
+    --orbeon-control-border-color: #949494;
+  }
+}
+@media screen {
+  .orbeon {
+    --orbeon-control-height: calc(1em + 15px);
+    --orbeon-textarea-height: calc(max(20px, 1em) * 3 + 8px);
+    --orbeon-multiple-select-height: calc((max(20px, 1em) + 5px) * 3 - 5px + 8px);
+  }
+}
+@media screen {
+  .orbeon .fr-color-scheme-dark,
+  .orbeon:has(.fr-color-scheme-dark) {
+    color-scheme: dark;
+    /*= #050506*/
+    /*= #17191c*/
+    /*= #26282c*/
+    /*= #2f3237*/
+    /*= #3f444a*/
+    /*= #6c737f*/
+    /*= #7e8591*/
+    /*= #c8cbd0*/
+    /*= #f1f2f3*/
+    --orbeon-base-background-color: hsl(217, 8%, 10%);
+    --orbeon-base-border-color: hsl(217, 8%, 27%);
+    --orbeon-base-color: hsl(217, 8%, 95%);
+    --orbeon-link-hover-color: #1ab2ff;
+    --orbeon-label-read-only-color: hsl(217, 8%, 53%);
+    --orbeon-hint-color: hsl(217, 8%, 53%);
+    --orbeon-help-icon-color: hsl(217, 8%, 95%);
+    --orbeon-help-background-color: hsl(217, 8%, 10%);
+    --orbeon-help-border-color: hsl(217, 8%, 27%);
+    --orbeon-help-title-background-color: hsl(217, 8%, 16%);
+    --orbeon-help-title-border-color: hsl(217, 8%, 27%);
+    --orbeon-help-close-color: white;
+    --orbeon-help-close-text-shadow-color: transparent;
+    --orbeon-control-color: hsl(217, 8%, 95%);
+    --orbeon-control-background-color: hsl(217, 8%, 10%);
+    --orbeon-control-read-only-background-color: hsl(217, 8%, 20%);
+    --orbeon-control-border-color: hsl(217, 8%, 27%);
+    --orbeon-add-on-background-color: hsl(217, 8%, 20%);
+    --orbeon-add-on-text-shadow-color: transparent;
+    --orbeon-dropdown-caret-color: hsl(217, 8%, 95%);
+    --orbeon-dropdown-search-caret-color: hsl(217, 8%, 95%);
+    --orbeon-dropdown-selected-background-color: hsl(217, 8%, 27%);
+    --orbeon-attachment-drop-color: hsl(217, 8%, 53%);
+    --orbeon-attachment-dragover-color: hsl(217, 8%, 10%);
+    --orbeon-attachment-dragover-background-color: hsl(217, 8%, 27%);
+    --orbeon-handwritten-signature-background-color: hsl(217, 8%, 95%);
+    --orbeon-handwritten-signature-read-only-background-color: hsl(217, 8%, 80%);
+    --orbeon-image-attachment-background-color: hsl(217, 8%, 20%);
+    --orbeon-button-color: hsl(217, 8%, 95%);
+    --orbeon-button-background-color: hsl(217, 8%, 27%);
+    --orbeon-button-highlight-background-color: hsl(217, 8%, 27%);
+    --orbeon-button-disabled-color: hsl(217, 8%, 46%);
+    --orbeon-button-disabled-background-color: hsl(217, 22%, 15%);
+    --orbeon-button-primary-color: hsl(217, 8%, 95%);
+    --orbeon-button-primary-background-color: hsl(217, 98%, 63%);
+    --orbeon-button-primary-highlight-background-color: hsl(217, 98%, 70%);
+    --orbeon-button-primary-disabled-color: hsl(217, 8%, 46%);
+    --orbeon-button-primary-disabled-background-color: hsl(217, 52%, 25%);
+    --orbeon-button-warning-color: hsl(217, 8%, 95%);
+    --orbeon-button-warning-background-color: hsl(35, 95%, 48%);
+    --orbeon-button-warning-highlight-background-color: hsl(35, 95%, 55%);
+    --orbeon-button-warning-disabled-color: hsl(217, 8%, 46%);
+    --orbeon-button-warning-disabled-background-color: hsl(35, 85%, 18%);
+    --orbeon-button-danger-color: hsl(217, 8%, 95%);
+    --orbeon-button-danger-background-color: hsl(358, 68%, 52%);
+    --orbeon-button-danger-highlight-background-color: hsl(358, 68%, 59%);
+    --orbeon-button-danger-disabled-color: hsl(217, 8%, 46%);
+    --orbeon-button-danger-disabled-background-color: hsl(358, 44%, 21%);
+    --orbeon-button-success-color: hsl(217, 8%, 95%);
+    --orbeon-button-success-background-color: hsl(120, 37%, 52%);
+    --orbeon-button-success-highlight-background-color: hsl(120, 37%, 59%);
+    --orbeon-button-success-disabled-color: hsl(217, 8%, 46%);
+    --orbeon-button-success-disabled-background-color: hsl(120, 44%, 21%);
+    --orbeon-button-info-color: hsl(217, 8%, 95%);
+    --orbeon-button-info-background-color: hsl(197, 57%, 51%);
+    --orbeon-button-info-highlight-background-color: hsl(197, 57%, 58%);
+    --orbeon-button-info-disabled-color: hsl(217, 8%, 46%);
+    --orbeon-button-info-disabled-background-color: hsl(197, 50%, 20%);
+    --orbeon-button-inverse-color: hsl(217, 8%, 10%);
+    --orbeon-button-inverse-background-color: hsl(0, 0%, 85%);
+    --orbeon-button-inverse-highlight-background-color: hsl(0, 0%, 100%);
+    --orbeon-button-inverse-disabled-color: hsl(217, 8%, 10%);
+    --orbeon-button-inverse-disabled-background-color: hsl(0, 0%, 29%);
+    --orbeon-button-disabled-opacity: 1;
+    --orbeon-button-disabled-icon-opacity: 1;
+    --orbeon-dropdown-open-toggle-background-color: var(--orbeon-button-highlight-background-color);
+    --orbeon-dropdown-menu-color: hsl(217, 8%, 95%);
+    --orbeon-dropdown-menu-background-color: hsl(217, 8%, 16%);
+    --orbeon-dropdown-menu-hover-color: hsl(217, 8%, 95%);
+    --orbeon-dropdown-menu-hover-background-color: var(--orbeon-button-primary-background-color);
+    --orbeon-dropdown-menu-selected-color: hsl(217, 8%, 95%);
+    --orbeon-dropdown-menu-selected-background-color: var(--orbeon-dropdown-menu-hover-background-color);
+    --orbeon-dropdown-menu-disabled-color: hsl(217, 8%, 46%);
+    --orbeon-dropdown-menu-border-color: hsla(217, 8%, 27%, 0.75);
+    --orbeon-dropdown-menu-divider-color: hsl(217, 8%, 27%);
+    --orbeon-section-color: hsl(217, 8%, 80%);
+    --orbeon-section-background-color: hsl(217, 8%, 20%);
+    --orbeon-repeater-add-button-color: hsl(217, 8%, 95%);
+    --orbeon-repeat-menu-background-color: hsl(217, 8%, 16%);
+    --orbeon-repetition-number-color: hsl(217, 8%, 10%);
+    --orbeon-repetition-number-background-color: hsl(217, 8%, 53%);
+    --orbeon-repetition-number-text-shadow-color: transparent;
+    --orbeon-repetition-selected-background-color: hsl(217, 8%, 20%);
+    --orbeon-toc-color: hsl(217, 98%, 63%);
+    --orbeon-toc-background-color: hsl(217, 8%, 10%);
+    --orbeon-toc-hover-background-color: hsl(217, 8%, 20%);
+    --orbeon-toc-selected-color: hsl(217, 8%, 10%);
+    --orbeon-toc-selected-background-color: var(--orbeon-toc-color);
+    --orbeon-toc-error-color: hsl(358, 45%, 62%);
+    --orbeon-toc-selected-error-color: hsl(217, 8%, 10%);
+    --orbeon-toc-selected-error-background-color: hsl(358, 45%, 62%);
+    --orbeon-navbar-background-color: hsl(217, 8%, 2%);
+    --orbeon-table-background-color: hsl(217, 8%, 10%);
+    --orbeon-table-striped-background-color: hsl(217, 8%, 16%);
+    --orbeon-table-hover-background-color: hsl(217, 8%, 20%);
+    --orbeon-table-border-color: hsl(217, 8%, 27%);
+    --orbeon-tab-background-color: hsl(217, 8%, 10%);
+    --orbeon-tab-border-color: hsl(217, 8%, 27%);
+    --orbeon-search-free-input-read-only-background-color: hsl(217, 8%, 20%);
+    --orbeon-revision-history-pane-head-background-color: hsl(217, 8%, 16%);
+    --orbeon-revision-history-entry-background-color: hsl(217, 8%, 20%);
+    --orbeon-revision-history-entry-border-color: hsl(217, 8%, 27%);
+    --orbeon-active-alert-color: hsl(217, 8%, 10%);
+    --orbeon-alert-color: hsl(217, 8%, 53%);
+    --orbeon-alert-background-color: hsl(217, 8%, 10%);
+    --orbeon-alert-border-color: hsl(217, 8%, 27%);
+    --orbeon-alert-text-shadow-color: transparent;
+    --orbeon-alert-error-color: hsl(358, 81%, 81%);
+    --orbeon-alert-error-background-color: hsl(358, 26%, 20%);
+    --orbeon-alert-error-border-color: hsl(358, 24%, 25%);
+    --orbeon-alert-success-color: hsl(120, 64%, 68%);
+    --orbeon-alert-success-background-color: hsl(120, 16%, 20%);
+    --orbeon-alert-success-border-color: hsl(120, 18%, 25%);
+    --orbeon-alert-warning-color: hsl(35, 48%, 61%);
+    --orbeon-alert-warning-background-color: hsl(35, 32%, 20%);
+    --orbeon-alert-warning-border-color: hsl(35, 33%, 25%);
+    --orbeon-error-summary-title-color: hsl(217, 8%, 10%);
+    --orbeon-error-summary-title-bottom-border-color: transparent;
+    --orbeon-error-summary-item-background-color: hsl(217, 8%, 10%);
+    --orbeon-info-color: hsl(197, 50%, 61%);
+    --orbeon-warning-color: hsl(35, 95%, 48%);
+    --orbeon-error-color: hsl(358, 45%, 62%);
+    --orbeon-landing-card-border-color: hsl(217, 8%, 27%);
+    --orbeon-landing-card-image-border: hsl(217, 8%, 27%);
+    --orbeon-landing-card-header-color: hsl(217, 8%, 95%);
+    --orbeon-landing-card-header-background-color: hsl(217, 8%, 20%);
+    --orbeon-landing-card-hover-background-color: hsl(217, 8%, 20%);
+    --orbeon-landing-card-link-color: hsl(217, 93%, 62%);
+    --orbeon-landing-card-link-hover-color: var(--orbeon-landing-card-link-color);
+    --orbeon-dialog-background-color: hsl(217, 8%, 20%);
+    --orbeon-dialog-title-color: hsl(217, 8%, 95%);
+    --orbeon-dialog-title-background-color: hsl(217, 8%, 16%);
+    --orbeon-version-color: hsl(217, 8%, 53%);
+    --orbeon-on-premise-captcha-label-color: hsl(217, 8%, 16%);
+    --orbeon-stripe-color-1: hsl(217, 8%, 20%);
+    --orbeon-stripe-color-2: hsl(217, 8%, 10%);
+  }
+}
+@media screen and (prefers-color-scheme: dark) {
+  .orbeon .fr-color-scheme-system,
+  .orbeon:has(.fr-color-scheme-system) {
+    color-scheme: dark;
+    /*= #050506*/
+    /*= #17191c*/
+    /*= #26282c*/
+    /*= #2f3237*/
+    /*= #3f444a*/
+    /*= #6c737f*/
+    /*= #7e8591*/
+    /*= #c8cbd0*/
+    /*= #f1f2f3*/
+    --orbeon-base-background-color: hsl(217, 8%, 10%);
+    --orbeon-base-border-color: hsl(217, 8%, 27%);
+    --orbeon-base-color: hsl(217, 8%, 95%);
+    --orbeon-link-hover-color: #1ab2ff;
+    --orbeon-label-read-only-color: hsl(217, 8%, 53%);
+    --orbeon-hint-color: hsl(217, 8%, 53%);
+    --orbeon-help-icon-color: hsl(217, 8%, 95%);
+    --orbeon-help-background-color: hsl(217, 8%, 10%);
+    --orbeon-help-border-color: hsl(217, 8%, 27%);
+    --orbeon-help-title-background-color: hsl(217, 8%, 16%);
+    --orbeon-help-title-border-color: hsl(217, 8%, 27%);
+    --orbeon-help-close-color: white;
+    --orbeon-help-close-text-shadow-color: transparent;
+    --orbeon-control-color: hsl(217, 8%, 95%);
+    --orbeon-control-background-color: hsl(217, 8%, 10%);
+    --orbeon-control-read-only-background-color: hsl(217, 8%, 20%);
+    --orbeon-control-border-color: hsl(217, 8%, 27%);
+    --orbeon-add-on-background-color: hsl(217, 8%, 20%);
+    --orbeon-add-on-text-shadow-color: transparent;
+    --orbeon-dropdown-caret-color: hsl(217, 8%, 95%);
+    --orbeon-dropdown-search-caret-color: hsl(217, 8%, 95%);
+    --orbeon-dropdown-selected-background-color: hsl(217, 8%, 27%);
+    --orbeon-attachment-drop-color: hsl(217, 8%, 53%);
+    --orbeon-attachment-dragover-color: hsl(217, 8%, 10%);
+    --orbeon-attachment-dragover-background-color: hsl(217, 8%, 27%);
+    --orbeon-handwritten-signature-background-color: hsl(217, 8%, 95%);
+    --orbeon-handwritten-signature-read-only-background-color: hsl(217, 8%, 80%);
+    --orbeon-image-attachment-background-color: hsl(217, 8%, 20%);
+    --orbeon-button-color: hsl(217, 8%, 95%);
+    --orbeon-button-background-color: hsl(217, 8%, 27%);
+    --orbeon-button-highlight-background-color: hsl(217, 8%, 27%);
+    --orbeon-button-disabled-color: hsl(217, 8%, 46%);
+    --orbeon-button-disabled-background-color: hsl(217, 22%, 15%);
+    --orbeon-button-primary-color: hsl(217, 8%, 95%);
+    --orbeon-button-primary-background-color: hsl(217, 98%, 63%);
+    --orbeon-button-primary-highlight-background-color: hsl(217, 98%, 70%);
+    --orbeon-button-primary-disabled-color: hsl(217, 8%, 46%);
+    --orbeon-button-primary-disabled-background-color: hsl(217, 52%, 25%);
+    --orbeon-button-warning-color: hsl(217, 8%, 95%);
+    --orbeon-button-warning-background-color: hsl(35, 95%, 48%);
+    --orbeon-button-warning-highlight-background-color: hsl(35, 95%, 55%);
+    --orbeon-button-warning-disabled-color: hsl(217, 8%, 46%);
+    --orbeon-button-warning-disabled-background-color: hsl(35, 85%, 18%);
+    --orbeon-button-danger-color: hsl(217, 8%, 95%);
+    --orbeon-button-danger-background-color: hsl(358, 68%, 52%);
+    --orbeon-button-danger-highlight-background-color: hsl(358, 68%, 59%);
+    --orbeon-button-danger-disabled-color: hsl(217, 8%, 46%);
+    --orbeon-button-danger-disabled-background-color: hsl(358, 44%, 21%);
+    --orbeon-button-success-color: hsl(217, 8%, 95%);
+    --orbeon-button-success-background-color: hsl(120, 37%, 52%);
+    --orbeon-button-success-highlight-background-color: hsl(120, 37%, 59%);
+    --orbeon-button-success-disabled-color: hsl(217, 8%, 46%);
+    --orbeon-button-success-disabled-background-color: hsl(120, 44%, 21%);
+    --orbeon-button-info-color: hsl(217, 8%, 95%);
+    --orbeon-button-info-background-color: hsl(197, 57%, 51%);
+    --orbeon-button-info-highlight-background-color: hsl(197, 57%, 58%);
+    --orbeon-button-info-disabled-color: hsl(217, 8%, 46%);
+    --orbeon-button-info-disabled-background-color: hsl(197, 50%, 20%);
+    --orbeon-button-inverse-color: hsl(217, 8%, 10%);
+    --orbeon-button-inverse-background-color: hsl(0, 0%, 85%);
+    --orbeon-button-inverse-highlight-background-color: hsl(0, 0%, 100%);
+    --orbeon-button-inverse-disabled-color: hsl(217, 8%, 10%);
+    --orbeon-button-inverse-disabled-background-color: hsl(0, 0%, 29%);
+    --orbeon-button-disabled-opacity: 1;
+    --orbeon-button-disabled-icon-opacity: 1;
+    --orbeon-dropdown-open-toggle-background-color: var(--orbeon-button-highlight-background-color);
+    --orbeon-dropdown-menu-color: hsl(217, 8%, 95%);
+    --orbeon-dropdown-menu-background-color: hsl(217, 8%, 16%);
+    --orbeon-dropdown-menu-hover-color: hsl(217, 8%, 95%);
+    --orbeon-dropdown-menu-hover-background-color: var(--orbeon-button-primary-background-color);
+    --orbeon-dropdown-menu-selected-color: hsl(217, 8%, 95%);
+    --orbeon-dropdown-menu-selected-background-color: var(--orbeon-dropdown-menu-hover-background-color);
+    --orbeon-dropdown-menu-disabled-color: hsl(217, 8%, 46%);
+    --orbeon-dropdown-menu-border-color: hsla(217, 8%, 27%, 0.75);
+    --orbeon-dropdown-menu-divider-color: hsl(217, 8%, 27%);
+    --orbeon-section-color: hsl(217, 8%, 80%);
+    --orbeon-section-background-color: hsl(217, 8%, 20%);
+    --orbeon-repeater-add-button-color: hsl(217, 8%, 95%);
+    --orbeon-repeat-menu-background-color: hsl(217, 8%, 16%);
+    --orbeon-repetition-number-color: hsl(217, 8%, 10%);
+    --orbeon-repetition-number-background-color: hsl(217, 8%, 53%);
+    --orbeon-repetition-number-text-shadow-color: transparent;
+    --orbeon-repetition-selected-background-color: hsl(217, 8%, 20%);
+    --orbeon-toc-color: hsl(217, 98%, 63%);
+    --orbeon-toc-background-color: hsl(217, 8%, 10%);
+    --orbeon-toc-hover-background-color: hsl(217, 8%, 20%);
+    --orbeon-toc-selected-color: hsl(217, 8%, 10%);
+    --orbeon-toc-selected-background-color: var(--orbeon-toc-color);
+    --orbeon-toc-error-color: hsl(358, 45%, 62%);
+    --orbeon-toc-selected-error-color: hsl(217, 8%, 10%);
+    --orbeon-toc-selected-error-background-color: hsl(358, 45%, 62%);
+    --orbeon-navbar-background-color: hsl(217, 8%, 2%);
+    --orbeon-table-background-color: hsl(217, 8%, 10%);
+    --orbeon-table-striped-background-color: hsl(217, 8%, 16%);
+    --orbeon-table-hover-background-color: hsl(217, 8%, 20%);
+    --orbeon-table-border-color: hsl(217, 8%, 27%);
+    --orbeon-tab-background-color: hsl(217, 8%, 10%);
+    --orbeon-tab-border-color: hsl(217, 8%, 27%);
+    --orbeon-search-free-input-read-only-background-color: hsl(217, 8%, 20%);
+    --orbeon-revision-history-pane-head-background-color: hsl(217, 8%, 16%);
+    --orbeon-revision-history-entry-background-color: hsl(217, 8%, 20%);
+    --orbeon-revision-history-entry-border-color: hsl(217, 8%, 27%);
+    --orbeon-active-alert-color: hsl(217, 8%, 10%);
+    --orbeon-alert-color: hsl(217, 8%, 53%);
+    --orbeon-alert-background-color: hsl(217, 8%, 10%);
+    --orbeon-alert-border-color: hsl(217, 8%, 27%);
+    --orbeon-alert-text-shadow-color: transparent;
+    --orbeon-alert-error-color: hsl(358, 81%, 81%);
+    --orbeon-alert-error-background-color: hsl(358, 26%, 20%);
+    --orbeon-alert-error-border-color: hsl(358, 24%, 25%);
+    --orbeon-alert-success-color: hsl(120, 64%, 68%);
+    --orbeon-alert-success-background-color: hsl(120, 16%, 20%);
+    --orbeon-alert-success-border-color: hsl(120, 18%, 25%);
+    --orbeon-alert-warning-color: hsl(35, 48%, 61%);
+    --orbeon-alert-warning-background-color: hsl(35, 32%, 20%);
+    --orbeon-alert-warning-border-color: hsl(35, 33%, 25%);
+    --orbeon-error-summary-title-color: hsl(217, 8%, 10%);
+    --orbeon-error-summary-title-bottom-border-color: transparent;
+    --orbeon-error-summary-item-background-color: hsl(217, 8%, 10%);
+    --orbeon-info-color: hsl(197, 50%, 61%);
+    --orbeon-warning-color: hsl(35, 95%, 48%);
+    --orbeon-error-color: hsl(358, 45%, 62%);
+    --orbeon-landing-card-border-color: hsl(217, 8%, 27%);
+    --orbeon-landing-card-image-border: hsl(217, 8%, 27%);
+    --orbeon-landing-card-header-color: hsl(217, 8%, 95%);
+    --orbeon-landing-card-header-background-color: hsl(217, 8%, 20%);
+    --orbeon-landing-card-hover-background-color: hsl(217, 8%, 20%);
+    --orbeon-landing-card-link-color: hsl(217, 93%, 62%);
+    --orbeon-landing-card-link-hover-color: var(--orbeon-landing-card-link-color);
+    --orbeon-dialog-background-color: hsl(217, 8%, 20%);
+    --orbeon-dialog-title-color: hsl(217, 8%, 95%);
+    --orbeon-dialog-title-background-color: hsl(217, 8%, 16%);
+    --orbeon-version-color: hsl(217, 8%, 53%);
+    --orbeon-on-premise-captcha-label-color: hsl(217, 8%, 16%);
+    --orbeon-stripe-color-1: hsl(217, 8%, 20%);
+    --orbeon-stripe-color-2: hsl(217, 8%, 10%);
+  }
+}
+@media print {
+  .orbeon:has(.fr-pdf-color-mode-black-and-white),
+  .orbeon:has(.fr-pdf-color-mode-keep-field-colors) {
+    --orbeon-base-background-color: white !important;
+  }
+  .orbeon,
+  .orbeon .fr-pdf-color-mode-black-and-white,
+  .orbeon .fr-pdf-color-mode-keep-field-colors {
+    --orbeon-base-background-color: white;
+    --orbeon-base-border-color: #e3e3e3;
+    --orbeon-base-font-family: "Helvetica Neue";
+    --orbeon-base-color: black;
+    --orbeon-control-read-only-background-color: white;
+    --orbeon-control-border-color: #ccc;
+    --orbeon-handwritten-signature-read-only-background-color: white;
+    --orbeon-section-color: black;
+    --orbeon-section-background-color: white;
+    --orbeon-repeat-menu-background-color: white;
+    --orbeon-toc-color: black;
+    --orbeon-navbar-background-color: white;
+    --orbeon-navbar-heading-font-size: 1.85em;
+    --orbeon-navbar-heading-color: black;
+    --orbeon-alert-color: black;
+    --orbeon-alert-background-color: white;
+    --orbeon-alert-border-color: #e3e3e3;
+    --orbeon-alert-error-color: black;
+    --orbeon-alert-error-background-color: white;
+    --orbeon-alert-error-border-color: #f5c2c7;
+    --orbeon-alert-success-color: black;
+    --orbeon-alert-success-background-color: white;
+    --orbeon-alert-success-border-color: #badbcc;
+    --orbeon-alert-warning-color: black;
+    --orbeon-alert-warning-background-color: white;
+    --orbeon-alert-warning-border-color: #ffecb5;
+  }
+}
+/* Original CSS path: /xbl/orbeon/countdown/countdown.css */
+.xbl-fr-countdown {
+  display: inline-block;
+}
+.xbl-fr-countdown .fr-countdown-end-time {
+  display: none;
+}
+/* Original CSS path: /xbl/orbeon/revision-history/revision-history.css */
+.orbeon .xbl-fr-revision-history > .fr-pane:not(.xforms-disabled) {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1030;
+  height: 100vh;
+  width: 400px;
+  box-sizing: border-box;
+  border-left: 2px solid var(--orbeon-revision-history-entry-border-color);
+  background-color: var(--orbeon-base-background-color);
+  display: flex;
+  flex-direction: column;
+}
+.orbeon .xbl-fr-revision-history > .fr-pane:not(.xforms-disabled) .fr-pane-head {
+  flex-grow: 0;
+  background-color: var(--orbeon-revision-history-pane-head-background-color);
+  border: none;
+  font-size: var(--orbeon-revision-history-pane-title-font-size);
+  line-height: 2rem;
+  padding: 0 10px;
+  font-weight: bold;
+  color: var(--orbeon-base-color);
+}
+.orbeon .xbl-fr-revision-history > .fr-pane:not(.xforms-disabled) .fr-pane-head .fr-revision-history-close-button button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center / 1em auto no-repeat;
+  opacity: 0.5;
+  width: 1rem;
+  height: 1rem;
+  padding: 0.5rem 0.5rem;
+  margin: -0.5rem -0.5rem -0.5rem auto;
+}
+.orbeon .xbl-fr-revision-history > .fr-pane:not(.xforms-disabled) .fr-pane-body {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: scroll;
+}
+.orbeon .xbl-fr-revision-history > .fr-pane:not(.xforms-disabled) .fr-pane-body .fr-history-entry {
+  display: block;
+  background-color: var(--orbeon-revision-history-entry-background-color);
+  border: 1px solid var(--orbeon-revision-history-entry-border-color);
+  border-radius: 4px;
+  padding: 4px;
+  margin-bottom: 0.5em;
+}
+.orbeon .xbl-fr-revision-history > .fr-pane:not(.xforms-disabled) .fr-pane-body .fr-history-entry .fr-revision-history-username {
+  display: block;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  border-top: 1px solid var(--orbeon-revision-history-entry-border-color);
+}
+.orbeon .xbl-fr-revision-history > .fr-pane:not(.xforms-disabled) .fr-pane-body .fr-history-entry ul {
+  margin-bottom: 0;
+}
+.orbeon .xbl-fr-revision-history > .fr-pane:not(.xforms-disabled) .fr-pane-body .fr-history-entry ul li > .xforms-output:first-child {
+  font-weight: bold;
+}
+.orbeon .xbl-fr-revision-history > .fr-pane:not(.xforms-disabled) .fr-pane-body .fr-history-entry ul li > .xforms-output:first-child .xforms-output-output:not(:empty):after {
+  content: ": ";
+}
+.orbeon .xbl-fr-revision-history > .fr-pane:not(.xforms-disabled) .fr-pane-body .fr-load-more-button {
+  display: block;
+  text-align: center;
+}
+.orbeon .xbl-fr-revision-history > .fr-pane:not(.xforms-disabled) .fr-pane-footer {
+  flex-grow: 0;
+  padding: 10px;
+  text-align: center;
+}
+.orbeon .xbl-fr-revision-history > .fr-pane:not(.xforms-disabled) .fr-pane-footer.fr-buttons button {
+  min-width: 8.5em;
+  white-space-collapse: preserve;
+}
+@media screen {
+  .orbeon .fr-color-scheme-dark .fr-revision-history-close-button button,
+  .orbeon:has(.fr-color-scheme-dark) .fr-revision-history-close-button button {
+    filter: invert(1);
+  }
+}
+@media screen and (prefers-color-scheme: dark) {
+  .orbeon .fr-color-scheme-system .fr-revision-history-close-button button,
+  .orbeon:has(.fr-color-scheme-system) .fr-revision-history-close-button button {
+    filter: invert(1);
+  }
+}
+/* Original CSS path: /config/theme/orbeon-custom.cirb.css */
+/* Custom CSS for Orbeon Forms customization */
+
+.orbeon:not(:has(.fb-main)) {
+    /*--orbeon-control-border-radius: 12px;*/
+    /*--orbeon-base-background-color: red;*/
+    /*--orbeon-handwritten-signature-background-color: purple;*/
+}
+
+.disabled.orbeon:not(:has(.fb-main)) {
+
+    --orbeon-base-font-size                           : 14px;
+    --orbeon-section-background-color                 : #EBEBF5;
+    --orbeon-navbar-background-color                  : #2F3E8B;
+    --orbeon-navbar-heading-color                     : white;
+    --orbeon-navbar-language-dropdown-color           : white;
+    --orbeon-toc-color                                : #2F3E8B;
+    --orbeon-toc-selected-background-color            : #2F3E8B;
+    --orbeon-toc-hover-background-color               : #EBEBF5;
+    --orbeon-hint-font-family                         : Inter, Helvetica, Arial, sans-serif;
+    --orbeon-hint-font-size                           : 13px;
+    --orbeon-hint-color                               : #6C757D;
+    --orbeon-label-font-family                        : Inter, Helvetica, Arial, sans-serif;
+    --orbeon-label-font-weight                        : 500;
+    --orbeon-label-color                              : #212529;
+    --orbeon-control-font-family                      : Inter, Helvetica, Arial, sans-serif;
+    --orbeon-control-color                            : #212529;
+    --orbeon-control-border-radius                    : 12px;
+    --orbeon-add-on-gap                               : 4px;
+    --orbeon-add-on-inner-border-radius               : var(--orbeon-control-border-radius);
+    --orbeon-focus-border-color                       : #2F3E8B;
+    --orbeon-focus-highlight-color                    : rgba(47,62,139,0.15);
+    --orbeon-control-focus-ring                       : 0 0 0 3px rgba(47,62,139,0.15);
+    --orbeon-required-icon-display-before             : none;
+    --orbeon-required-icon-display-after              : inline;
+    --orbeon-button-font-family                       : Inter, Helvetica, Arial, sans-serif;
+    --orbeon-button-font-weight                       : 500;
+    --orbeon-button-font-size                         : 16px;
+    --orbeon-button-border-radius                     : 9999px;
+    --orbeon-button-inner-border-radius               : var(--orbeon-button-border-radius);
+    --orbeon-button-padding                           : 14px 24px;
+    --orbeon-button-toggle-padding                    : var(--orbeon-button-padding);
+    --orbeon-button-focus-ring                        : 0 0 0 3px rgba(255,255,255,0.9), 0 0 0 6px rgba(47,62,139,0.6);
+    --orbeon-button-color                             : #fff;
+    --orbeon-button-background-color                  : #2F3E8B;
+    --orbeon-button-highlight-background-color        : #2A3780;
+    --orbeon-button-primary-background-color          : var(--orbeon-button-background-color);
+    --orbeon-button-primary-highlight-background-color: var(--orbeon-button-highlight-background-color);
+    --orbeon-button-primary-disabled-background-color : var(--orbeon-button-background-color);
+
+    --orbeon-form-description-background-color        : #EBEBF5;
+    --orbeon-form-description-color                   : #2F3E8B;
+    --orbeon-form-description-border-left             : 4px solid #2F3E8B;
+    --orbeon-form-description-padding                 : 12px 16px;
+    --orbeon-form-description-font-weight             : 500;
+
+    --orbeon-checkable-checked-background-color       : #2F3E8B;
+    --orbeon-checkable-checked-border-color           : #2F3E8B;
+    --orbeon-checkable-disabled-border-color          : #E0E0EF;
+    --orbeon-checkable-focus-ring                     : 0 0 0 2px #fff, 0 0 0 4px rgba(34, 45, 101, 0.3);
+
+    --orbeon-label-letter-spacing                     : normal;
+    --orbeon-label-text-transform                     : none;
+    --orbeon-label-margin                             : 0;
+    --orbeon-grid-label-margin                        : 0;
+    --orbeon-label-padding                            : 10px 0 5px 0;
+
+    --orbeon-help-icon-color                          : #fff;
+    --orbeon-help-icon-content                        : "?";
+    --orbeon-help-icon-font-family                    : Inter, Helvetica, Arial, sans-serif;
+    --orbeon-help-icon-font-weight                    : 700;
+    --orbeon-help-icon-font-size                      : 10px;
+    --orbeon-help-icon-gap                            : 6px;
+    --orbeon-help-icon-background-color               : #2F3E8B;
+    --orbeon-help-icon-hover-background-color         : #2A3780;
+    --orbeon-help-icon-active-background-color        : #242F6F;
+    --orbeon-help-icon-border-radius                  : 50%;
+    --orbeon-help-icon-focus-outline                  : none;
+    --orbeon-help-icon-focus-ring                     : 0 0 0 2px #fff, 0 0 0 4px rgba(47,62,139,0.6);
+
+    --orbeon-textarea-resize                          : none;
+
+    --orbeon-invalid-label-color                      : #D4351C;
+    --orbeon-invalid-control-border-color             : #D4351C;
+    --orbeon-invalid-control-border-width             : 2px;
+
+    --orbeon-control-height                           : auto;
+    --orbeon-textarea-height                          : auto;
+    --orbeon-multiple-select-height                   : auto;
+
+    --orbeon-error-summary-display                    : none;
+    --orbeon-kbd-hint-display                         : none;
+
+    /* Scoped to invalid+visited so warning/info active alerts keep the master callout look */
+    .xforms-control.xforms-invalid.xforms-visited {
+        --orbeon-invalid-alert-background-color: transparent;
+        --orbeon-active-alert-border-width     : 0;
+        --orbeon-active-alert-padding          : 0;
+        --orbeon-active-alert-margin-top       : 4px;
+        --orbeon-active-alert-pointer-display  : none;
+        --orbeon-active-alert-color            : #D4351C;
+        --orbeon-active-alert-font-family      : Inter, Helvetica, Arial, sans-serif;
+        --orbeon-active-alert-font-size        : 13px;
+    }
+}
+
+/* Full CIRB styling */
+.disabled.orbeon:not(:has(.fb-main)) {
+
+  position: relative; /* Needed for the datepicker, until Orbeon Forms is upgraded to 2024.1.4 or newer, see #7375. */
+
+  .fr-form-description, .fr-wizard-toc, .fr-section-content {
+    * { font-size: 14px !important; }
+  }
+
+  .fr-form-description {
+    background-color: #EBEBF5 !important;
+    border-left: 4px solid #2F3E8B !important;
+    padding: 12px 16px !important;
+    font-weight: 500 !important;
+    color: #2F3E8B !important;
+  }
+
+  .fr-wizard-toc {
+    li.active       > .xforms-trigger > .btn-link       { background-color: #2F3E8B !important; }
+    li:not(.active) > .xforms-trigger > .btn-link       { color:            #2F3E8B !important; }
+    li:not(.active) > .xforms-trigger > .btn-link:hover { background-color: #EBEBF5 !important; }
+  }
+
+  .fr-buttons .btn,
+  .fr-section-content .btn {
+    background-color: #2F3E8B;
+    color: #fff;
+    border-radius: 9999px;
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 14px 24px;
+
+    &:hover {
+      background-color: rgba(47,62,139,0.6) !important;
+      color: #fff !important;
+    }
+
+    &:focus {
+      background-color: #2A3780;
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.9), 0 0 0 6px rgba(47,62,139,0.6);
+    }
+
+    .fa {
+      color: #fff !important;
+    }
+  }
+
+  .fr-grid .fr-repeat-column-left > .dropdown {
+    display: flex !important;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .fr-section-content .fr-grid-dropdown-button {
+    min-width: 0;
+    padding: 0 6px !important;
+    border-radius: 3px;
+    font-size: 12px !important;
+    line-height: 18px !important;
+
+    &:focus,
+    &:focus-visible {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .fr-grid-dropdown-menu .dropdown-menu > li:not(.disabled):not(.divider) > a {
+    &:hover,
+    &:focus {
+      background-color: #2F3E8B !important;
+      color: #fff !important;
+
+      .fa {
+        color: #fff !important;
+      }
+    }
+  }
+
+  .xforms-label {
+    font-family: Inter, Helvetica, Arial, sans-serif !important;
+    font-weight: 500 !important;
+    color: #212529 !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    margin: 0 !important;
+    padding: 10px 0 5px 0 !important;
+  }
+
+  .xforms-help,
+  form#xforms-form .xforms-help {
+    &:not(:empty) {
+      width: 14px !important;
+      height: 14px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background-color: #2F3E8B !important;
+      color: #fff !important;
+      border: 0 !important;
+      border-radius: 50% !important;
+      padding: 0 !important;
+      margin-right: 6px !important;
+      line-height: 1 !important;
+      position: relative !important;
+      text-indent: -9999px !important;
+      overflow: hidden !important;
+
+      &::before {
+        content: "?";
+        position: absolute !important;
+        inset: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-indent: 0 !important;
+        color: #fff !important;
+        font-family: Inter, Helvetica, Arial, sans-serif !important;
+        font-size: 10px !important;
+        font-weight: 700 !important;
+        line-height: 1 !important;
+        transform: translateX(0.5px);
+        margin-right: 1px !important;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: #2A3780 !important;
+      }
+
+      &:active {
+        background-color: #242F6F !important;
+      }
+
+      &:focus-visible {
+        outline: none !important;
+        box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(47,62,139,0.6) !important;
+      }
+    }
+
+    &:empty {
+      display: none !important;
+    }
+  }
+
+  input:not([type="checkbox"]):not([type="radio"]),
+  textarea,
+  select {
+    font-family: Inter, Helvetica, Arial, sans-serif !important;
+    color: #212529 !important;
+    border-radius: 12px !important;
+    height: auto !important;
+  }
+
+  input:focus:not([type="checkbox"]):not([type="radio"]),
+  textarea:focus,
+  select:focus {
+    outline: none !important;
+    border-color: #2F3E8B !important;
+    box-shadow: 0 0 0 3px rgba(47,62,139,0.15) !important;
+  }
+
+  textarea {
+    resize: none !important;
+  }
+
+  .xforms-hint {
+    font-family: Inter, Helvetica, Arial, sans-serif !important;
+    font-size: 13px !important;
+    color: #6C757D !important;
+  }
+
+  .xbl-fr-section .fr-section-title {
+    background-color: #EBEBF5 !important;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    &:checked {
+      background-color: #2F3E8B !important;
+      border-color: #2F3E8B !important;
+    }
+    &:disabled {
+      border-color: #E0E0EF !important;
+    }
+    &:focus-visible {
+      outline: none !important;
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(34, 45, 101, 0.3) !important;
+    }
+  }
+
+  .input-append .add-on {
+    margin-left: 4px !important;
+    border-radius: 12px !important;
+  }
+
+  .xforms-control.xforms-invalid.xforms-visited {
+    .xforms-label {
+      color: #D4351C !important;
+    }
+
+    input,
+    textarea,
+    select {
+      border: 2px solid #D4351C !important;
+    }
+
+    .xforms-alert {
+      display: block !important;
+      color: #D4351C !important;
+      font-family: Inter, Helvetica, Arial, sans-serif !important;
+      font-size: 13px !important;
+      font-weight: 400 !important;
+      margin-top: 4px !important;
+      background-color: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+
+      &::before {
+        display: none !important;
+      }
+    }
+  }
+
+  kbd,
+  .xbl-fr-error-summary {
+    display: none !important;
+  }
+
+  .navbar,
+  .navbar-inner {
+    background-color: #2F3E8B !important;
+    background-image: none !important;
+  }
+
+  .navbar,
+  .navbar * {
+    color: #fff !important;
+  }
+
+  .xforms-required .xforms-label::before {
+    content: none !important;
+    margin-right: 0 !important;
+  }
+
+  .xforms-required .xforms-label::after {
+    font-family: FontAwesome !important;
+    content: "\00a0\f005" !important;
+    vertical-align: super !important;
+    line-height: 1em !important;
+    font-size: 60% !important;
+    margin-left: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .xforms-required.xforms-empty .xforms-label::after {
+    color: rgb(185, 74, 72) !important;
+  }
+}
+/* Original CSS path: /apps/fr/style/form-runner-responsive.css */
+@media (max-width: 980px) {
+  .orbeon .fr-view {
+    width: auto;
+    padding: 0 10px;
+  }
+  .orbeon .span12 {
+    width: auto;
+    float: none;
+  }
+  .orbeon.xforms-mobile select,
+  .orbeon.xforms-mobile textarea,
+  .orbeon.xforms-mobile input[type="text"],
+  .orbeon.xforms-mobile input[type="password"],
+  .orbeon.xforms-mobile input[type="datetime"],
+  .orbeon.xforms-mobile input[type="datetime-local"],
+  .orbeon.xforms-mobile input[type="date"],
+  .orbeon.xforms-mobile input[type="month"],
+  .orbeon.xforms-mobile input[type="time"],
+  .orbeon.xforms-mobile input[type="week"],
+  .orbeon.xforms-mobile input[type="number"],
+  .orbeon.xforms-mobile input[type="email"],
+  .orbeon.xforms-mobile input[type="url"],
+  .orbeon.xforms-mobile input[type="search"],
+  .orbeon.xforms-mobile input[type="tel"],
+  .orbeon.xforms-mobile input[type="color"] {
+    font-size: 16px;
+  }
+  .orbeon .fr-toc-with-body.fr-toc-position-left .fr-toc,
+  .orbeon .fr-toc-with-body.fr-toc-position-top .fr-toc,
+  .orbeon .fr-toc-with-body.fr-toc-position-left .fr-wizard-toc,
+  .orbeon .fr-toc-with-body.fr-toc-position-top .fr-wizard-toc {
+    position: static;
+    max-width: 100%;
+  }
+  .orbeon .fr-toc-with-body.fr-toc-position-left > * {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .orbeon .fr-toc-with-body.fr-toc-position-left > * .fr-toc {
+    max-width: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

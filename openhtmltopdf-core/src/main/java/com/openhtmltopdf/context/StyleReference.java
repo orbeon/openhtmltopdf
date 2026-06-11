@@ -102,7 +102,7 @@ public class StyleReference {
 
         _matcher = new Matcher(
                 new DOMTreeResolver(),
-                new StandardAttributeResolver(_nsh, _uac, ui),
+                new CachingAttributeResolver(new StandardAttributeResolver(_nsh, _uac, ui)),
                 _stylesheetFactory,
                 readAndParseAll(infos, _context.getMedia()),
                 _context.getMedia());

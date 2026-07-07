@@ -5,7 +5,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-REVISION="${1:-1.1.37-orbeon.3}"
+REVISION="${1:-1.1.37-orbeon.4}"
 GITHUB_REPOSITORY="${GITHUB_REPOSITORY:-orbeon/openhtmltopdf}"
 
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"

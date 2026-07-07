@@ -5,14 +5,17 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-REVISION="${1:-1.1.37-orbeon.2}"
+REVISION="${1:-1.1.37-orbeon.2.1}"
 GITHUB_REPOSITORY="${GITHUB_REPOSITORY:-orbeon/openhtmltopdf}"
 
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
-if [ "$BRANCH" != "orbeon" ]; then
-    echo "Refusing to publish: on branch '$BRANCH', expected 'orbeon'." >&2
-    exit 1
-fi
+case "$BRANCH" in
+    orbeon|orbeon-*) ;;
+    *)
+        echo "Refusing to publish: on branch '$BRANCH', expected 'orbeon' or 'orbeon-*'." >&2
+        exit 1
+        ;;
+esac
 
 echo "Publishing $REVISION from branch '$BRANCH' to maven.pkg.github.com/$GITHUB_REPOSITORY ..."
 

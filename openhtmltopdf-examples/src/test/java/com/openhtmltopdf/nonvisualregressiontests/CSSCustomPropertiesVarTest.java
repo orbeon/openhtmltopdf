@@ -371,4 +371,34 @@ public class CSSCustomPropertiesVarTest {
             "</style></head><body><div id=\"x\">X</div></body></html>");
         assertColor("x", 11, 22, 33);
     }
+
+    @Test
+    public void varAsRgbComponent() throws IOException {
+        // rgb()/cmyk() are evaluated while parsing, so a var() parameter has
+        // to defer the whole function to the pending path.
+        layoutHtml("<html><head><style>" +
+            "#x { --r: 10; color: rgb(var(--r), 20, 30); }" +
+            "</style></head><body><div id=\"x\">X</div></body></html>");
+        assertColor("x", 10, 20, 30);
+    }
+
+    @Test
+    public void varAsWholeRgbArgumentList() throws IOException {
+        // One custom property standing in for several arguments at once.
+        layoutHtml("<html><head><style>" +
+            "#x { --rgb: 10, 20, 30; color: rgb(var(--rgb)); }" +
+            "</style></head><body><div id=\"x\">X</div></body></html>");
+        assertColor("x", 10, 20, 30);
+    }
+
+    @Test
+    public void undefinedVarInRgbIsUnset() throws IOException {
+        // The deferred function must still go unset (here: inherit) when the
+        // reference cannot be resolved, not render as an unevaluated function.
+        layoutHtml("<html><head><style>" +
+            "body { color: rgb(7, 7, 7); }" +
+            "#x { color: rgb(var(--nope), 20, 30); }" +
+            "</style></head><body><div id=\"x\">X</div></body></html>");
+        assertColor("x", 7, 7, 7);
+    }
 }

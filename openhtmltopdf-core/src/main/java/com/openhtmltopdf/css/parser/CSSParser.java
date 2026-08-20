@@ -1727,7 +1727,13 @@ public class CSSParser {
                 throw new CSSParseException(t, Token.TK_RPAREN, getCurrentLine());
             }
 
-            if (f.equals("rgb(")) {
+            if (CSSValueText.containsVarFunction(params)) {
+                // A parameter references a custom property, so the function
+                // cannot be evaluated yet. Keep it as a generic function; the
+                // whole declaration becomes pending and is re-parsed (and then
+                // evaluated here) once the var() references are substituted.
+                result = new PropertyValue(new FSFunction(f.substring(0, f.length() - 1), params));
+            } else if (f.equals("rgb(")) {
                 result = new PropertyValue(createRGBColorFromFunction(params));
             } else if (f.equals("cmyk(")) {
                 if (!isSupportCMYKColors()) {
